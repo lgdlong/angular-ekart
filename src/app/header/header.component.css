@@ -1,0 +1,218 @@
+/* Apply Roboto to all text globally */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Optional: Ensure smooth font loading and fallbacks */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ekart-header {
+    width: 100%;
+    /* Consider using rem or vh for responsiveness, but keeping as is for now */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1.5px solid #E5E4E2;
+    background-color: #ffffff;
+    /* Clean white background for contrast */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
+
+/* Logo styling */
+.ekart-logo {
+    padding: 1vh 3vh;
+    font-size: 40px;
+    font-weight: 700;
+    /* Use numeric weight for Roboto */
+    color: #36454F;
+    /* width: 20%; */
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    text-transform: uppercase;
+    /* Optional: Makes logo text stand out */
+}
+
+/* Navigation container */
+.ekart-header-nav {
+    width: 50%;
+    padding: 1vh 2vh;
+    font-size: 14px;
+    /* Slightly larger for better readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Menu (Home, Products, etc.) */
+.ekart-menu {
+    padding: 1vh 0;
+    color: #36454F;
+    font-weight: 500;
+    /* Medium weight for menu items */
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    /* Space between menu items for better spacing */
+}
+
+.ekart-menu a {
+    text-decoration: none;
+    color: #515151;
+    padding: 5px 10px;
+    /* Padding for better click area */
+    position: relative;
+    /* Needed for the pseudo-element positioning */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    /* Smooth transitions */
+}
+
+/* Create the underline effect using ::after pseudo-element */
+.ekart-menu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    /* Thickness of the line */
+    bottom: -5px;
+    /* Position below the text */
+    left: 100%;
+    /* Start from the right */
+    background-color: #000000;
+    /* Black line */
+    transition: width 0.3s ease, left 0.3s ease;
+    /* Animate width and position */
+}
+
+/* Animation on hover: line grows from right to left */
+.ekart-menu a:hover::after {
+    width: 100%;
+    /* Full width of the link */
+    left: 0;
+    /* Move to the left */
+}
+
+/* Ensure the text color changes on hover as before */
+.ekart-menu a:hover {
+    color: #000000;
+}
+
+/* Search bar container */
+.ekart-search-bar {
+    padding: 0 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search input */
+.ekart-search-box {
+    width: 200px;
+    /* Slightly wider for usability */
+    height: 36px;
+    /* Taller for better touch interaction */
+    border: none;
+    background-color: #f5f5f5;
+    /* Light gray for contrast */
+    padding: 5px 15px;
+    border-radius: 20px 0 0 20px;
+    /* Rounded left corners for modern look */
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    transition: width 0.3s ease;
+    /* Smooth width animation on focus */
+}
+
+.ekart-search-box:focus {
+    outline: none;
+    width: 250px;
+    /* Expands on focus for better typing */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    /* Blue glow on focus */
+}
+
+/* Search button */
+.ekart-search-btn {
+    width: 38px;
+    height: 46px;
+    border: none;
+    background-color: #f5f5f5;
+    padding: 5px 15px;
+    /* Match input background */
+    border-radius: 0 20px 20px 0;
+    /* Rounded right corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* Smooth hover effect */
+}
+
+.ekart-search-btn:hover {
+    background-color: #e0e0e0;
+    /* Slightly darker on hover */
+}
+
+.ekart-search-btn i {
+    font-size: 16px;
+    /* Ensure icon is visible and sized appropriately */
+    color: #666;
+    /* Match text color */
+}
+
+/* General anchor tag styling (if needed globally, move to styles.css) */
+a {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ekart-header {
+        height: auto;
+        /* Allow height to adjust */
+        flex-direction: column;
+    }
+
+    .ekart-logo {
+        width: 100%;
+        padding: 1vh 4vh;
+        /* Reduced padding on mobile */
+        justify-content: center;
+        text-align: center;
+    }
+
+    .ekart-header-nav {
+        width: 100%;
+        padding: 1vh 1vh;
+    }
+
+    .ekart-top-bar {
+        text-align: center;
+        padding: 0.5vh 10px;
+    }
+
+    .ekart-menu {
+        flex-direction: column;
+        gap: 10px;
+        padding: 1vh 0;
+    }
+
+    .ekart-search-bar {
+        justify-content: center;
+        padding: 1vh 2vh;
+    }
+
+    .ekart-search-box {
+        width: 150px;
+        /* Smaller on mobile */
+    }
+}
