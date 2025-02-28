@@ -1,0 +1,8 @@
+<div class="product-list">
+    <img [src]='products[1].imgPath' title="Long" />
+    <p>Name: {{ products[1].name }}</p>
+    <p>Price: ${{ products[1].price }}</p>
+    <p>Color: {{ products[1].color }}</p>
+    <p>Discounted price: ${{ getDiscountedPrice(products[1]).toFixed(2) }}</p>
+    <p>{{ getInStockMessage(products[1]) }}</p>
+</div>

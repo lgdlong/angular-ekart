@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './top-header.component.css'
 })
 export class TopHeaderComponent {
+  saleOff: string = '60%';
 
+  a: number = 10;
+  b: number = 20;
 }
