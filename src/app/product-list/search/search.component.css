@@ -1,0 +1,16 @@
+.ekart-search-product-input {
+    height: 40px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #000000;
+}
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    height: 40px;
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 0;
+}
