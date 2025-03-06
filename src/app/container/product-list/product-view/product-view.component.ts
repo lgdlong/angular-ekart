@@ -17,27 +17,27 @@ export class ProductViewComponent {
   cartQuantity: number = 0;
   newName: string = '';
 
-  getDiscountedPrice(product: Product): number {
-    return product.price - (product.price * product.discountRate);
-  }
+  // getDiscountedPrice(product: Product): number {
+  //   return product.price - (product.price * product.discountRate);
+  // }
 
-  getInStockMessage(product: Product): string {
-    return product.inStock > 0 ? `Only ${product.inStock} in stock` : 'Out of Stock';
-  }
+  // getInStockMessage(product: Product): string {
+  //   return product.inStock > 0 ? `Only ${product.inStock} in stock` : 'Out of Stock';
+  // }
 
-  incrementCartValue(): void {
-    if (this.product && this.cartQuantity < this.product.inStock) {
-      this.cartQuantity++;
-      this.cartUpdated.emit(this.cartQuantity);
-    }
-  }
+  // incrementCartValue(): void {
+  //   if (this.product && this.cartQuantity < this.product.inStock) {
+  //     this.cartQuantity++;
+  //     this.cartUpdated.emit(this.cartQuantity);
+  //   }
+  // }
 
-  decrementCartValue(): void {
-    if (this.cartQuantity > 0) {
-      this.cartQuantity--;
-      this.cartUpdated.emit(this.cartQuantity);
-    }
-  }
+  // decrementCartValue(): void {
+  //   if (this.cartQuantity > 0) {
+  //     this.cartQuantity--;
+  //     this.cartUpdated.emit(this.cartQuantity);
+  //   }
+  // }
 
   changeName(newName: string): void {
     if (newName.trim()) {

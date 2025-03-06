@@ -1,17 +1,17 @@
 <h2>Searching Product</h2>
-<app-search (search)="onSearch($event)"></app-search>
+<!-- <app-search (search)="onSearch($event)"></app-search> -->
 
 <div class="product-list">
     <!-- Bug is here, product pass into properties not found -->
     <!-- May be error in *ngFor -->
-  <product-view *ngFor="let product of displayedProducts" [product]="product"></product-view>
+  <product-view *ngFor="let prod of products" [product]="prod"></product-view>
 </div>
 
-<br />
+<!-- <br />
 <input type="text" #nameInput placeholder="Enter new name..." />
 <button (click)="onChangeName(products[1], nameInput.value)">Enter</button>
 <p>Your name is {{products[1].name}}</p>
 
 <button class="btn-cart" (click)="decrementCartValue()">-</button>
 <span>Cart Value: {{addToCart}}</span>
-<button class="btn-cart" (click)="incrementCartValue(products[1])">+</button>
+<button class="btn-cart" (click)="incrementCartValue(products[1])">+</button> -->
